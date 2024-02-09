@@ -13,7 +13,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: kbgColor,
       appBar: AppBar(
-        elevation: 1,
+        elevation: 0,
         backgroundColor: Colors.transparent,
         title: Text(
           'Pet Adoption',
