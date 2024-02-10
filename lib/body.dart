@@ -80,7 +80,7 @@ class AdoptionListContainer extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
                 child: Image.asset(
                   details.image,
-                  fit: BoxFit.fitHeight,
+                  fit: BoxFit.scaleDown,
                 )),
           ),
         ),
