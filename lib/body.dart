@@ -47,8 +47,13 @@ class _BodyState extends State<Body> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) =>
-                              PetsDetails(details: detailsList[index])));
+                          builder: (context) => PetsDetails(
+                                details: detailsList[index],
+                                imagePath: detailsList[index].image,
+                                about: detailsList[index].description,
+                                heading: detailsList[index].title,
+                                age: detailsList[index].age,
+                              )));
                 },
                 child: AdoptionListContainer(details: detailsList[index]),
               );
