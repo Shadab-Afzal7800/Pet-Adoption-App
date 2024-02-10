@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pet_shop_app/banner.dart';
 
 import 'package:pet_shop_app/model/petsDetails.dart';
+import 'package:pet_shop_app/pages/detailsPage.dart';
 
 import 'availableListContainers.dart';
 
@@ -41,7 +42,16 @@ class _BodyState extends State<Body> {
                 childAspectRatio: 0.8),
             itemCount: detailsList.length,
             itemBuilder: (context, index) {
-              return AdoptionListContainer(details: detailsList[index]);
+              return GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              PetsDetails(details: detailsList[index])));
+                },
+                child: AdoptionListContainer(details: detailsList[index]),
+              );
             },
           ))
           // AdoptionListContainer(),
