@@ -57,18 +57,31 @@ class AdoptionListContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          height: 180,
-          width: 160,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            color: kParimaryColor,
-          ),
-          child: Center(
-            child: Image.asset(
-              details.image,
-              // fit: BoxFit.fill,
-            ),
+        // Container(
+        //   height: 180,
+        //   width: 160,
+        //   decoration: BoxDecoration(
+        //     borderRadius: BorderRadius.circular(20),
+        //     color: kParimaryColor,
+        //   ),
+        //   child: Center(
+        //     child: Image.asset(
+        //       details.image,
+        //       // fit: BoxFit.fill,
+        //     ),
+        //   ),
+        // ),
+        AspectRatio(
+          aspectRatio: 1.0,
+          child: Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20), color: kParimaryColor),
+            child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Image.asset(
+                  details.image,
+                  fit: BoxFit.fitHeight,
+                )),
           ),
         ),
         Text(
