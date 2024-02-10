@@ -88,6 +88,20 @@ class _PetsDetailsState extends State<PetsDetails> {
                           ),
                         )
                       ],
+                    ),
+                    Divider(),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 200),
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: Text(
+                          'Adopt ME',
+                          style: TextStyle(color: Colors.black),
+                        ),
+                        style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all(kParimaryColor)),
+                      ),
                     )
                   ],
                 ),
