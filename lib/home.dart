@@ -21,12 +21,25 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         centerTitle: true,
         actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.search)),
+          IconButton(onPressed: () {}, icon: Icon(Icons.pets)),
           CircleAvatar(
             backgroundColor: kParimaryColor,
-          )
+          ),
         ],
       ),
-      drawer: Drawer(),
+      drawer: Drawer(
+        child: ListView(children: [
+          UserAccountsDrawerHeader(
+            accountName: Text('Shadab Afzal'),
+            accountEmail: Text('Shadabafzal7800@gmail.com'),
+            currentAccountPicture: CircleAvatar(
+              backgroundImage: AssetImage('assets/images/all pets.png'),
+              backgroundColor: kbgColor,
+            ),
+          )
+        ]),
+      ),
       body: Body(),
     );
   }

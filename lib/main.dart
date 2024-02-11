@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pet_shop_app/constants.dart';
 import 'package:pet_shop_app/home.dart';
 
 void main() {
@@ -12,8 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
+          primaryColor: kParimaryColor,
           appBarTheme:
               AppBarTheme(iconTheme: IconThemeData(color: Colors.black))),
       home: HomeScreen(),
